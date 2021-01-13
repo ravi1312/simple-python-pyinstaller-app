@@ -1,12 +1,1 @@
-pipeline {
-    agent none
-    paramters{
-        string(name: 'BranchName', defaultValue: '', description: 'Mention the Specified Branch Name')
-    stages {
-        stage('Build') {
-            steps{
-                echo "${params.BranchName}"
-            }
-        }
-    }
-}
+
