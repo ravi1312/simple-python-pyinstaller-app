@@ -13,6 +13,7 @@ pipeline{
 		      """
 		      def JsonContent = readFile "/var/lib/jenkins/output.txt"
 		      echo ("CSV FILE PATH IS : ${JsonContent}")
+		      echo "$JsonContent"
 	      }
       }
     }
