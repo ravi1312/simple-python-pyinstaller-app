@@ -12,7 +12,7 @@ pipeline{
 	       	      sh $WORKSPACE/jenkins/script.sh "${params.BranchName}"
 		      """
 		      def JsonContent = readFile "/var/lib/jenkins/output.txt"
-		      echo ("CSV FILE PATH IS : ${inputJsonPath}")
+		      echo ("CSV FILE PATH IS : ${JsonContent}")
 	      }
       }
     }
