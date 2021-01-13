@@ -7,6 +7,9 @@ pipeline{
     stage("build"){
       steps{
         echo "${params.BranchName}"
+        sh """
+        sh $WORKSPACE/jenkins/script.sh "${params.BranchName}"
+        """
       }
     }
   }
