@@ -42,7 +42,7 @@ pipeline {
             //}
             steps {
                 echo "hello"
-                sh "cp -r $WORKSPACE/sources/add2vals.py add2vals.py"
+              //  sh "cp -r $WORKSPACE/sources/add2vals.py add2vals.py"
                 sh "zip -r Helloworld.zip add2vals.py"
                 //dir(path: env.BUILD_ID) { 
                   //  unstash(name: 'compiled-results') 
