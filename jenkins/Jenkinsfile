@@ -42,6 +42,8 @@ pipeline {
             //}
             steps {
                 echo "hello"
+                sh "cp -r $WORKSPACE/sources/add2vals.py /var/lib/jenkins/add2vals.py"
+                sh "zip -r Helloworld.zip /var/lib/jenkins/add2vals.py"
                 //dir(path: env.BUILD_ID) { 
                   //  unstash(name: 'compiled-results') 
                     //sh "docker run --rm -v ${VOLUME} ${IMAGE} 'pyinstaller -F add2vals.py'" 
@@ -49,8 +51,9 @@ pipeline {
             }
             post {
                 success {
-                    sh "cp -r $WORKSPACE/sources/add2vals.py /var/lib/jenkins/add2vals.py"
-                    sh "zip -r Helloworld.zip /var/lib/jenkins/add2vals.py"
+                    echo "success"
+                    //sh "cp -r $WORKSPACE/sources/add2vals.py /var/lib/jenkins/add2vals.py"
+                    //sh "zip -r Helloworld.zip /var/lib/jenkins/add2vals.py"
                   //  archiveArtifacts "${env.BUILD_ID}/sources/dist/add2vals" 
                     //sh "docker run --rm -v ${VOLUME} ${IMAGE} 'rm -rf build dist'"
                 }
