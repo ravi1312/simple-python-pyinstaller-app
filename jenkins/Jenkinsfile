@@ -41,7 +41,7 @@ pipeline {
             //}
             steps {
                 echo "hello"
-                sh "zip -r Helloworld.zip $WORKSPACE/sources/add2vals.py"
+              //  sh "zip -r Helloworld.zip $WORKSPACE/sources/add2vals.py"
                 //dir(path: env.BUILD_ID) { 
                   //  unstash(name: 'compiled-results') 
                     //sh "docker run --rm -v ${VOLUME} ${IMAGE} 'pyinstaller -F add2vals.py'" 
