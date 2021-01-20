@@ -13,7 +13,7 @@ pipeline {
             steps {
                 sh "cd $WORKSPACE"
                 sh "ls -lrt"
-                sh "sudo apt-get install git"
+                sh "apt-get install git"
                 sh "git clone https://github.com/ravi1312/simple-python-pyinstaller-app.git"
               //  sh 'python -m py_compile sources/add2vals.py sources/calc.py'
                 //stash(name: 'compiled-results', includes: 'sources/*.py*')
