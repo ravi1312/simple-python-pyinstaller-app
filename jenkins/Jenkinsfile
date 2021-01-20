@@ -1,15 +1,15 @@
 pipeline {
-    agent none
+    agent {
+        docker {
+            image 'python:2-alpine'
+        }
+    }
     options {
         skipStagesAfterUnstable()
     }
     stages {
         stage('Build') {
-            agent {
-                docker {
-                    image 'python:2-alpine'
-                }
-            }
+            agent any
             steps {
                 sh "cd $WORKSPACE"
                 sh "ls -lrt"
