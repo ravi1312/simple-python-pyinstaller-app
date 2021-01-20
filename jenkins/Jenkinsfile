@@ -9,7 +9,7 @@ pipeline {
     }
     stages {
         stage('Build') {
-            agent any
+            agent none
             steps {
                 sh "cd $WORKSPACE"
                 sh "ls -lrt"
@@ -18,11 +18,7 @@ pipeline {
             }
         }
         stage('Test') {
-            agent {
-                docker {
-                    image 'qnib/pytest'
-                }
-            }
+            agent none
             steps {
                 echo "test"
               //  sh "zip -r Helloworld.zip $WORKSPACE/sources/add2vals.py"
