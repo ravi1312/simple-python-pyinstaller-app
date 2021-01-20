@@ -9,7 +9,7 @@ pipeline {
     }
     stages {
         stage('Build') {
-            agent none
+          //  agent none
             steps {
                 sh "cd $WORKSPACE"
                 sh "ls -lrt"
@@ -18,7 +18,7 @@ pipeline {
             }
         }
         stage('Test') {
-            agent none
+          //  agent none
             steps {
                 echo "test"
               //  sh "zip -r Helloworld.zip $WORKSPACE/sources/add2vals.py"
@@ -31,7 +31,7 @@ pipeline {
             //}
         }
         stage('Deliver') { 
-            agent any
+           // agent any
             //environment { 
               //  VOLUME = '$(pwd)/sources:/src'
                 //IMAGE = 'cdrx/pyinstaller-linux:python2'
